@@ -1,0 +1,2 @@
+Basic Ionic Components:
+- Create a simple expense application
