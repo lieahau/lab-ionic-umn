@@ -1,3 +1,7 @@
+# Assignment Files
+*.pdf
+*.zip
+
 # Logs
 logs
 *.log
