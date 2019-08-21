@@ -1,0 +1,4 @@
+Ionic Framework with Angular (1):
+- Install and setup development environment for Ionic 4 with Angular
+- Start an Ionic project
+- Create and use pages and services component in Ionic & Angular
