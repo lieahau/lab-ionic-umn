@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recipes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recipe of recipes">
+      <div [routerLink]="['./', recipe.id]" style="width: 100%;">
+        <ion-avatar slot="start">
+          <ion-img [src]="recipe.imageUrl"></ion-img>
+        </ion-avatar>
+        <ion-label>{{ recipe.title }}</ion-label>
+      </div>
+      <ion-button slot="end" (click)="onClickDeleteRecipe(recipe.id)" fill="outline" color="danger">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item *ngIf="recipes && !recipes.length">
+      <ion-label text-center>No recipes to display</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
