@@ -1,0 +1,3 @@
+Navigation: Tabs & Side Drawer:
+- Create tabs and side drawers on Ionic Apps
+- Build and run Ionic app as native Apps
