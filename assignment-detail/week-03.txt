@@ -1,0 +1,4 @@
+Ionic Framework with Angular (2):
+- Use Angular Router to navigate between pages
+- Able to Pass and receive parameters when navigating
+- Use Ionic Controller: Alert and Toast
