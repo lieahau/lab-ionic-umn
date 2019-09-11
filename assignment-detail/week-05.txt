@@ -1,0 +1,3 @@
+Modal, Loading, and Action Sheet Controller:
+- Create and utilize modal, loading, and action sheet controllers
+- Implement sliding options on ion-item components
