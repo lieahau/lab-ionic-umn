@@ -37,23 +37,18 @@ export class PlaceDetailPage implements OnInit {
 
   async bookPlace() {
     const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Book Place',
+      header: 'Choose an Action',
       buttons: [
         {
-          text: 'Book with Random Date',
+          text: 'Select Date',
           handler: () => {
-            this.modalCtrl.create({
-              component: CreateBookingComponent,
-              componentProps: { selectedPlace: this.place }
-            }).then(modalElement => {
-              modalElement.present();
-              return modalElement.onDidDismiss();
-            }).then(response => {
-              if(response.role == 'confirm'){
-                this.bookingsService.setBooking(response.data.place, response.data.userId, response.data.guestNumber);
-                this.navCtrl.navigateRoot('/bookings')
-              }
-            });
+            this.openBookingModal('select');;
+          }
+        },
+        {
+          text: 'Random Date',
+          handler: () => {
+            this.openBookingModal('random');
           }
         },
         {
@@ -63,6 +58,21 @@ export class PlaceDetailPage implements OnInit {
       ]
     });
     await actionSheet.present();
+  }
+
+  openBookingModal(mode: 'select' | 'random'){
+    this.modalCtrl.create({
+      component: CreateBookingComponent,
+      componentProps: { selectedPlace: this.place }
+    }).then(modalElement => {
+      modalElement.present();
+      return modalElement.onDidDismiss();
+    }).then(response => {
+      if(response.role == 'confirm'){
+        this.bookingsService.setBooking(response.data.place, response.data.userId, response.data.guestNumber);
+        this.navCtrl.navigateRoot('/bookings')
+      }
+    });
   }
 
 }
