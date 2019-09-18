@@ -4,12 +4,12 @@
   </ion-thumbnail>
   <ion-label>
     <h2>{{ offer.title }}</h2>
-    <div>
+    <div class="offer-details">
       <ion-icon name="calendar"></ion-icon>
-      <ion-text color="primary">--</ion-text>
+      <ion-text color="primary" class="space-left">{{ getDummyDate() | date }}</ion-text>
       <span>to</span>
       <ion-icon name="calendar"></ion-icon>
-      <ion-text color="primary">--</ion-text>
+      <ion-text color="primary" class="space-left">{{ getDummyDate() | date }}</ion-text>
     </div>
   </ion-label>
   <ion-icon slot="end" name="arrow-dropright" color="medium"></ion-icon>
