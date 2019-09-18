@@ -1,0 +1,3 @@
+Styling and Custom Component:
+- modify app styling and theming configuration
+- create custom components
