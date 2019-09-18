@@ -1,3 +1,4 @@
 Styling and Custom Component:
+- create virtual scrolling
 - modify app styling and theming configuration
 - create custom components
