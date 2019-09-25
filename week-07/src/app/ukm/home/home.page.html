@@ -1,0 +1,13 @@
+<ion-content>
+  <ion-card *ngFor="let ukm of ukm_list">
+    <ion-card-header>
+      <ion-card-title>{{ ukm.title }}</ion-card-title>
+      <ion-card-subtitle>{{ ukm.description }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="justify-content-end">
+      <ion-button (click)="onJoinUKM(ukm)" fill="outline">
+        Join
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
