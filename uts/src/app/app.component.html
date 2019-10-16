@@ -1,0 +1,31 @@
+<ion-app>
+  <ion-menu menuId="m1" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Gebetapp</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content no-padding>
+      <ion-menu-toggle>
+        <ion-list class="side-menu-list">
+          <ion-item lines="none" [routerLink]="['/', 'daftar-calon-gebetan']" close>
+            <ion-icon slot="start" name="list-box"></ion-icon>
+            <ion-label>Daftar Calon Gebetan</ion-label>
+          </ion-item>
+          <ion-item lines="none" [routerLink]="['/', 'target-gebetan']" close>
+            <ion-icon slot="start" name="checkbox-outline"></ion-icon>
+            <ion-label>Target Gebetan</ion-label>
+          </ion-item>
+          <ion-item lines="none" [routerLink]="['/', 'profil']" close>
+            <ion-icon slot="start" name="contact"></ion-icon>
+            <ion-label>Profil</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

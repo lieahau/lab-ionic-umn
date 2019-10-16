@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Gebetapp</ion-title>
+    <ion-button [routerLink]="['/', 'profil']" slot="end" fill="clear">
+      <ion-avatar class="user-avatar">
+        <img src="assets/images/profile.JPG"/>
+      </ion-avatar>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-black">
+  <ion-list no-padding>
+    <ion-item-sliding *ngFor="let calon of calon_list" #slidingItem>
+      <app-calon-item [calon]="calon"></app-calon-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="OnTargeting(calon, slidingItem)" color="medium">
+          <ion-icon *ngIf="isTargeted(calon)" slot="icon-only" name="heart" color="danger"></ion-icon>
+          <ion-icon *ngIf="!isTargeted(calon)" slot="icon-only" name="heart-empty" color="danger"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

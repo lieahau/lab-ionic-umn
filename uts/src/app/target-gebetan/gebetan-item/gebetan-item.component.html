@@ -1,0 +1,25 @@
+<ion-item class="bg-black">
+  <ion-card class="card-container">
+    <ion-grid no-padding>
+      <ion-row class="card-content">
+        <ion-col size-md="2" size-sm="4">
+          <ion-img [src]="target.picture" class="item-picture"></ion-img>
+        </ion-col>
+        <ion-col size-md="10" size-sm="8">
+          <ion-label class="ion-text-wrap">
+            <h2><b>{{ target.name }}</b></h2>
+            <h3>{{ target.description }}</h3>
+            <ion-label *ngIf="target.gender==0" class="item-gender">
+              <ion-icon slot="start" name="male" class="item-gender-icon"></ion-icon>
+              <h3>Laki-laki</h3>
+            </ion-label>
+            <ion-label *ngIf="target.gender==1" class="item-gender">
+              <ion-icon slot="start" name="female" class="item-gender-icon"></ion-icon>
+              <h3>Perempuan</h3>
+            </ion-label>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-item>

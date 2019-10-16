@@ -1,0 +1,22 @@
+.card-container{
+    width: 100%;
+    --background: silver;
+    --color: black;
+    
+    .card-content{
+        padding: 1em;
+
+        .item-picture{
+            min-width: 2em;
+            max-width: 10em;
+        }
+        .item-gender{
+            display: flex;
+            flex-direction: row;
+
+            .item-gender-icon{
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
