@@ -1,0 +1,2 @@
+Authentication:
+- Signup and Signin using Firebase Auth
